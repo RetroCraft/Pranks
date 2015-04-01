@@ -5,7 +5,7 @@ file="$base/evil.css"
 
 echo "Downloading evil.css..."
 mkdir -p "$base"
-curl -L --progress-bar 'https://github.com/RetroCraft/evil.css/raw/master/evil.css' > "$file"
+curl -L --progress-bar 'https://raw.githubusercontent.com/RetroCraft/Pranks/master/evil.css/evil.css' > "$file"
 echo "Download complete... killing Safari..."
 osascript -e 'tell application "Safari"' -e 'quit' -e 'end tell'
 sleep 1

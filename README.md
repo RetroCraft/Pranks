@@ -28,9 +28,13 @@ Uninstall it by deselecting the stylesheet in Safari's preferences, or execute t
 
 This bookmarklet will inject the latest version of evil.css into any webpage, just copy and paste into the URL bar and hit enter:
 
-    javascript:(function(d,l){l=d.createElement("link");l.rel="stylesheet";l.href="http://rawgit.com/RetroCraft/Pranks/master/evil.css/evil.css";d.body.appendChild(l)})(document);
+    javascript:(function(d,l){l=d.createElement("link");l.rel="stylesheet";l.href="https://raw.githubusercontent.com/RetroCraft/Pranks/master/evil.css/evil.css";d.body.appendChild(l)})(document);
+    
+### Credits
+
+Forked from tlrobinson.
 
 Obligatory disclaimer
-=====================
+---------------------
 
 All these pranks are purely for entertainment purposes. I'm not responsible for anything you do with any of these, nor do I suggest doing any of the above activities, especially hacking backbone routers.
