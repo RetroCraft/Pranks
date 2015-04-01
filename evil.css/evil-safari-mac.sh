@@ -4,9 +4,9 @@ base="$HOME/Library/Application Support/Safari"
 file="$base/evil.css"
 
 echo "Do you wish to install or uninstall?"
-select yn in "Install" "Uninstall"; do
-    case $yn in
-        Install ) echo "Downloading evil.css..."
+select IU in "Install" "Uninstall"; do
+    case "$IU" in
+        ( Install ) echo "Downloading evil.css..."
             mkdir -p "$base"
             curl -L --progress-bar 'https://github.com/RetroCraft/evil.css/raw/master/evil.css' > "$file"
             echo "Download complete... killing Safari..."
@@ -21,8 +21,8 @@ select yn in "Install" "Uninstall"; do
             open -a "Safari" "http://www.apple.ca"
             echo "ALL DONE! Exiting terminal."
             exit
-        break;;
-        Uninstall )
+        ;;
+        ( Uninstall )
             echo "Uninstalling evil.css... killing Safari"
             osascript -e 'tell application "Safari"' -e 'quit' -e 'end tell'
             echo "Deleting evil.css..."
@@ -34,6 +34,10 @@ select yn in "Install" "Uninstall"; do
             open -a "Safari" "http://www.apple.ca"
             echo "ALL DONE! Exiting terminal."
             exit
+        ;;
+        ( * )
+            echo "I don't know how you managed to select something else. Exiting shell, run program again."
+            exit;
         ;;
     esac
 done
